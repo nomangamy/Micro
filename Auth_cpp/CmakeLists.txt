@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.15)
+project(AuthCppService CXX)
+
+set(CMAKE_TOOLCHAIN_FILE"C:/path/to/vcpkg/scripts/buildsystems/vcpkg.cmake")
+
+find_package(Crow REQUIRED)
+
+add_executable(AuthCppService main.cpp)
+target_link_libraries(AuthCppService PRIVATE Crow::Crow)
+
